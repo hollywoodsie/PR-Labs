@@ -21,15 +21,15 @@ worker.on('message', (msg) => {
 });
 
 setTimeout(() => {
-  worker.postMessage('Hello worker1!');
+  worker.postMessage('Hello worker 1!');
 }, 2000);
 
 worker2.on('message', (msg) => {
-  console.log('Message from worker2!', msg);
+  console.log('Message from worker 2!', msg);
 });
 
 setTimeout(() => {
-  worker2.postMessage('Hello worker3!');
+  worker2.postMessage('Hello worker 2!');
 }, 4000);
 
 worker3.on('message', (msg) => {
@@ -37,5 +37,5 @@ worker3.on('message', (msg) => {
 });
 
 setTimeout(() => {
-  worker3.postMessage('Hello worker2!');
+  worker3.postMessage('Hello worker 3!');
 }, 6000);
